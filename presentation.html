@@ -6,8 +6,14 @@
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 <head>
-    <title>Visualization</title>
+    <title>Presentation</title>
     <link rel="icon" href="icon/my_logo.png" type="image/x-icon">
     <style>
         html {
@@ -31,14 +37,6 @@
             float: right;
         }
 
-        .my_code {
-            border-radius: 25px;
-            background: #73AD21;
-            padding: 20px;
-            width: 200px;
-            height: 150px;
-        }
-
         .container {
             display: inline-block;
 
@@ -58,6 +56,22 @@
             font-family: 'Space Mono';
             padding-left: 20px;
         }
+
+        .typed-out2 {
+            overflow: hidden;
+            border-right: none;
+            /* No cursor */
+            white-space: nowrap;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            width: auto;
+            /* Or set to your desired width */
+            color: #810CA8;
+            font-family: 'Space Mono';
+            padding-left: 20px;
+        }
+
 
         @keyframes typing {
             from {
@@ -189,12 +203,6 @@
 
         }
 
-        .my_about {
-            font-size: 42px;
-            color: #ffffff;
-            font-family: 'Montserrat';
-        }
-
         .aboutp {
             margin: none;
             flex: 1;
@@ -202,6 +210,7 @@
             font-family: 'Space Mono';
             font-size: 18px;
             color: #810CA8;
+            padding-left: 200px;
             padding-right: 50px;
             padding-top: 50px;
             line-height: 40px;
@@ -717,87 +726,141 @@
             }
         }
     </style>
+
 </head>
 
 <body>
 
-    <!-- header start -->
     <div class="header">
         <div class="logo">
-          Traffic_Men<span style="color:#810CA8;">.team</span>
+            Traffic_Men<span style="color:#810CA8;">.team</span>
         </div>
         <div class="menu">
-          <a href="index.html" class="link">
-            <div class="title" id="about">HOME</div>
-            <div class="bar"></div>
-          </a>
-          <a href="data_scraping.html" class="link">
-            <div class="title" id="about">Scraping</div>
-            <div class="bar"></div>
-          </a>
-          <a href="root_map_visul.html" class="link">
-            <div class="title" id="about">Visualization</div>
-            <div class="bar"></div>
-          </a>
-          <a href="root_map_gen.html" class="link">
-            <div class="title" id="about">Generation</div>
-            <div class="bar"></div>
-          </a>
-          <a href="graph.html" class="link">
-            <div class="title" id="about">Graphs</div>
-            <div class="bar"></div>
-          </a>
-          <a href="index.html" class="link">
-            <div class="title" id="about">GO BACK</div>
-            <div class="bar"></div>
-          </a>
-    
-        </div>
-      </div>
-    
-    <div class="about">Root Map Visualization</div>
-    <div class="aboutp" style="padding-left: 200Px;">
-        This code is designed to analyze and visualize bus route data by creating a network graph that represents the routes and stops. It starts by loading and cleaning the data, removing unnecessary columns, and calculating the traffic for each bus stop by counting the number of routes passing through. The code then filters the data for a specific stop ("DUNLOP") and visualizes the bus routes passing through that stop using a graph where each stop is a node and each bus route is an edge. The next stop for each bus is calculated and assigned to ensure a complete dataset. Unique identifiers are given to stops to avoid ambiguity, and color coding is applied to distinguish between different bus routes and stops. The graph is styled for better visual appeal, and custom legends are created to represent the different elements of the graph. Finally, the graph is saved as an image for sharing or further use. Future enhancements are suggested to improve the graph by allowing multiple routes to share the same stop and curving edges to prevent overlap.</div>
-    <div class="my_about" style="display: flex; justify-content: space-evenly;">
-        <div>
-            <a href="https://colab.research.google.com/drive/1_5eFrVTP4Qu0TuDJxnf1Zw6Jx93z0Jkw#scrollTo=ghviZK1e2XHH">
-                <h4>Google Colab Link</h4>
+            <a href="index.html" class="link">
+                <div class="title" id="about">HOME</div>
+                <div class="bar"></div>
             </a>
+            <a href="finder.html" class="link">
+                <div class="title" id="about">Finder</div>
+                <div class="bar"></div>
+              </a>
+              <a href="mod_eval.html" class="link">
+                <div class="title" id="about">Model Evaluation</div>
+                <div class="bar"></div>
+              </a>
+            <a href="presentation.html" class="link">
+                <div class="title">Present</div>
+                <div class="bar"></div>
+            </a>
+            <a href="route.html" class="link">
+                <div class="title">ROUTE+</div>
+                <div class="bar"></div>
+            </a>
+            <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </li> -->
         </div>
     </div>
 
-    <script src="https://gist.github.com/HIRU-VIRU/95e33e6afe9decf573e35ab73c3e1c34.js"></script>
-
-
-
-
-    <!-- headear end -->
-
-    <!-- <div class="holder">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-  </div>
-  
-  <div class="container">
-  <div class="text12">
-    
-  </div>
-  <div class="typed-out">
-     Tech enthusiast, code poet, and digital explore.
+    <!-- <div class="container">
+    <div class="text12 typed-out">
+      AI-Driven Dynamic Public Transportation Scheduler
     </div>
+
+    <div class="typed-out2">
+      <p>Data Scraping, Root Map Visualization and Root Map Generation.</p>
     </div>
-   
-  <div class="about" id="about_nijeesh">About</div>
-  
-  <div class="aboutp">Hey, I'm Nijeesh NJ. I am a front-end web developer. OOP's (Object Oriented Programming) lover always. Passionate about Film making, I work as a music producer and prompt engineer. Always curious to learn more about technology 
-    and creative competitive coding.</div>
-  
-    <div class="about1" id="project_nijeesh">Project</div>
+  </div>
+
+  <div class="about" id="about_nijeesh">Problem Statement</div>
+
+  <div class="aboutp">
+    As urban populations grow, managing public transportation to meet dynamic demand becomes more complex. Traditional
+    scheduling systems often struggle to adapt to real-time fluctuations in commuter demand, traffic conditions, or
+    unscheduled events like concerts, sports matches, and road closures. This can result in:
+    <ul>
+      <li>Overcrowded buses or trains.</li>
+      <li>Under-utilized vehicles.</li>
+      <li>Longer commute times and delays.</li>
+    </ul>
+  </div>
+
+  <div class="about" id="solution_overview">Solution Overview</div>
+
+  <div class="aboutp">
+    <h2>Deliverables</h2>
+    Develop an AI-based platform that autonomously manages the scheduling, routing, and dispatching of public transportation vehicles (buses, trains, etc.) based on real-time data and predictive insights. The system should:
+    <ul>
+      <li>Predict Commuter Demand: Leverage historical and live data to forecast demand across routes.
+      </li>
+      <li>Adapt Scheduling in Real-Time: Respond to live traffic conditions and events by dynamically adjusting schedules.
+      </li>
+      <li>Optimize Routing and Dispatching: Minimize congestion, reduce wait times, and balance vehicle utilization.
+      </li>
+    </ul>
+    <h2>Objectives</h2>
+    <ol>
+      <li>Real-Time Commuter Demand Prediction</li>
+      <ul>
+        <li>Use AI/ML algorithms to predict commuter demand based on historical patterns, seasonal trends, and real-time data (e.g., weather, local events, traffic data).</li>
+      </ul>
+      <li>Dynamic Scheduling and Routing</li>
+      <ul>
+        <li>
+          Continuously adapt transport schedules and routes in response to live traffic conditions and known events (e.g., concerts, sporting events, road closures).
+        </li>
+      </ul>
+      <li>Optimization of Dispatching</li>
+      <ul>
+        <li>Maximize vehicle utilization by balancing commuter loads, reducing underutilized runs, and minimizing commuter wait times.
+        </li>
+        <li>Reduce congestion and ensure equitable coverage across urban regions.</li>
+      </ul>
+    </ol>
+
+  </div>
+
+  <div class="about" id="key_features">Key Features</div>
+
+  <div class="aboutp">
+    As urban populations grow, managing public transportation to meet dynamic demand becomes more complex. Traditional
+    scheduling systems often struggle to adapt to real-time fluctuations in commuter demand, traffic conditions, or
+    unscheduled events like concerts, sports matches, and road closures. This can result in:
+    <ul>
+      <li>Real-Time Data Integration: Incorporates traffic data, commuter density, and event information to make
+        data-driven decisions.</li>
+      <li>Predictive Analytics for Demand Forecasting: Utilizes machine learning algorithms for accurate demand
+        predictions.</li>
+      <li>Adaptive Scheduling & Routing: Uses AI algorithms to adjust vehicle deployment and routes dynamically.</li>
+      <li>Event Awareness: Automatically adjusts based on both scheduled (e.g., concerts) and unexpected events (e.g.,
+        road closures).</li>
+      <li>Optimization Engine: Ensures optimal vehicle dispatching to balance demand and minimize commuter wait times.
+      </li>
+
+    </ul>
+  </div> -->
+
+    <div style="display: flex; justify-content: center;">
+        <div style="width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+            <iframe loading="lazy"
+                style="position: absolute; width: 100%; height: 80%; top: 0; left: 0; border: none; padding-left: 10%; padding-right: 10%;margin: 0;"
+                src="https://www.canva.com/design/DAGV4ka5XUc/GzJ3lU9NG2DauXAap0r1Gw/view?embed"
+                allowfullscreen="allowfullscreen" allow="fullscreen">
+            </iframe>
+        </div>
+
+    </div>
+    <!-- <div class="about1" id="project_nijeesh">Project</div>
     
       <ul class="timeline">
         <li class="event" data-date="HTML,CSS,JS">
@@ -839,6 +902,5 @@
     Copyrights Reserved by Nijeesh NJ.E-mail <a href="mailto:nijeesh10th@gmail.com">nijeesh10th@gmail.com</a>
   </div> -->
 </body>
-
 
 </html>

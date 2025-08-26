@@ -6,9 +6,25 @@
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
-    <title>ROUTE+</title>
+    <title>Graph</title>
     <link rel="icon" href="icon/my_logo.png" type="image/x-icon">
     <style>
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .image-item {
+            text-align: center;
+        }
+        .image-item img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
+        }
         html{
           overflow-x: hidden;
           scroll-behavior: smooth;
@@ -27,10 +43,11 @@
         width:30%;
         float: right;
       }
-      .container{
-        display: inline-block;
-        
-      }
+      .container {
+    display: flex;
+    justify-content: space-between; /* Optional, for spacing */
+}
+
       .typed-out{
         overflow: hidden;
         border-right: .15em solid rgb(255, 255, 255);
@@ -658,94 +675,32 @@
   </div>
   <!-- headear end -->
 
-
-  <div class="about1" id="project_nijeesh">Route +</div>
-    
-      <ul class="timeline">
-        <li class="event" data-date="requests, tqdm">
-          <h3><a href="data_scraping.html" style="color: #ffffff;">Data Scraping</a></h3>
-          <p><span style="font-family: Space Mono;color:#810CA8;font-size:16px">This script scrapes bus route data from <a href="https://mtcbus.tn.gov.in/Home/routewiseinfo">MTC website</a> using Python libraries like requests and BeautifulSoup. It collects available routes, extracts stop details for each route, and saves the data into a DataFrame. Progress is tracked using tqdm. Finally, the scraped data is exported as a CSV file.</span></p>
-        </li>
-        <li class="event" data-date="DUNLOP">
-          <h3><a href="root_map_visul.html" style="color: #ffffff;">Root Map Visualization</a></h3>
-          <p><span style="font-family: Space Mono;color:#810CA8;font-size:16px">The code visualizes bus routes using a network graph where nodes represent stops and edges represent routes, focusing on "DUNLOP" as a central stop. It assigns unique derived stops and colors nodes and edges based on routes. Enhancements aim to improve visual clarity and reduce edge intersection.</span></p>    
-        </li>
-        <li class="event" id="date" data-date="NetworkX">
-          <h3><a href="root_map_gen.html" style="color: #ffffff;">Root Map Generation</a></h3>
-          <p><span style="font-family: Space Mono;color:#810CA8;font-size:16px">This project uses Python along with libraries like Pandas for data manipulation, NetworkX for creating and analyzing the bus stop network, and Matplotlib for visualization. Pandas processes the CSV data, while NetworkX constructs the graph of bus stops, and Matplotlib handles the layout and graphical presentation of the routes.</span></p>  
-        </li>
-        
-        <li class="event" data-date="App">
-          <h3><a href="finder.html" style="color: #ffffff;">Route Finder</a></h3>
-          <p><span style="font-family: Space Mono;color:#810CA8;font-size:16px">Traffic-Based Route Finder is an interactive web tool that helps users find public transport routes with real-time traffic insights. Users can input their starting location and destination to receive a recommended bus route, complete with estimated travel time, distance, and stop-by-stop details.</span></p>
-        </li>
-      </ul>
-
-  <!-- <div class="holder">
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-  </div>
-  
-  <div class="container">
-  <div class="text12">
-    
-  </div>
-  <div class="typed-out">
-     Tech enthusiast, code poet, and digital explore.
+  <div class="image-container">
+    <div class="image-item">
+        <h1>Transportation Web of Dunlop and Surrounding Stops</h1>
+        <img src="image/1.png" alt="Image 1" style="margin-left: 30%; margin-right: 35%;">
     </div>
+    <div class="image-item">
+        <h1>Route-Wise Connectivity from Dunlop: Radial Map</h1>
+        <img src="image/3.png" alt="Image 1" style="margin-left: 30%; margin-right: 35%;">
     </div>
-   
-  <div class="about" id="about_nijeesh">About</div>
-  
-  <div class="aboutp">Hey, I'm Nijeesh NJ. I am a front-end web developer. OOP's (Object Oriented Programming) lover always. Passionate about Film making, I work as a music producer and prompt engineer. Always curious to learn more about technology 
-    and creative competitive coding.</div>
-  
-    <div class="about1" id="project_nijeesh">Project</div>
+    <div class="image-item">
+        <h1>Kamada-Kawai layout</h1>
+        <img src="image/4.png" alt="Image 1" style="margin-left: 30%; margin-right: 35%;">
+    </div>
+    <div class="image-item">
+        <h1>Extended Dunlop Map with Legend</h1>
+        <img src="image/5.png" alt="Image 1" style="margin-left: 30%; margin-right: 35%;">
+    </div>
+    <div class="image-item">
+        <h1>Shell layout</h1>
+        <img src="image/6.png" alt="Image 1" style="margin-left: 30%; margin-right: 35%;">
+    </div>
+</div>
+
     
-      <ul class="timeline">
-        <li class="event" data-date="HTML,CSS,JS">
-          <h3>Web Album</h3>
-          <p><span style="font-family: Space Mono;color:#810CA8;font-size:16px">A Photo Album which is private between two people and highly secure. You can view your photos with your loved ones in the highest quality with a melody running in the background. Hosted purely on Google drive.</span></p>
-          <a href="https://hpib5iamlgjjqvlsmsh15g.on.drv.tw/butterfly_skies_theme.html">Show Project</a>
-        </li>
-        <li class="event" data-date="Prompt Engineer">
-          <h3>Whisper of Destiny</h3>
-          <p><span style="font-family: Space Mono;color:#810CA8;font-size:16px">A book purely written with ChatGPT-3.5. Each chapter and the content was generated by AI via prompt engineering techinques.</span></p>    
-          <a href="https://notionpress.com/read/whisper-of-destiny?book=published">Show Project</a>
-        </li>
-        <li class="event" id="date" data-date="Automation">
-          <h3>ChatBot for Sugar Pop</h3>
-          <p><span style="font-family: Space Mono;color:#810CA8;font-size:16px">Created a simple mockup ChatBot for a cosemetic company called Sugar Pop using ChatFuel. ChatBot on Facebook but not avaiable for public. </span></p>  
-          <a href="https://drive.google.com/uc?id=1y9Y7q76_i_DPWaFpOTW29AaO9vkeIuwi">Show Flow Image</a>
-        </li>
-        
-        <li class="event" data-date="Music Producer">
-          <h3>Music Composer</h3>
-          <p><span style="font-family: Space Mono;color:#810CA8;font-size:16px">Composed few melodies and background scores for short films. Link below to my recent album.</span></p>
-          <a href="https://open.spotify.com/artist/4GMFk3QiUstQLAHrUYCqZP?si=1qEK3XQrTIaGXghNRnWuug">Show Melody</a>
-          <a href="https://www.youtube.com/@wingspicture1970">Show Visuals</a>
-        </li>
-      </ul>
-       
-  <div class="about2" id="contact_nijeesh">Contact</div> 
-  <div class="contact">
-    <a href="https://github.com/codebyNJ" class="fa fa-github"></a>
+
     
-    <a href="https://www.instagram.com/_nijeeshnj/" class="fa fa-instagram"></a>
-    
-    <a href="https://www.linkedin.com/in/nijeesh-nj-062468285/" class="fa fa-linkedin"></a>
-    
-    <a href="https://open.spotify.com/artist/4GMFk3QiUstQLAHrUYCqZP?si=1qEK3XQrTIaGXghNRnWuug" class="fa fa-spotify"></a>
-    
-  </div>   
-  <div class="footer">
-    Copyrights Reserved by Nijeesh NJ.E-mail <a href="mailto:nijeesh10th@gmail.com">nijeesh10th@gmail.com</a>
-  </div> -->
 </body>
 
 </html>
